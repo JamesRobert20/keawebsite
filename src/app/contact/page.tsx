@@ -9,8 +9,8 @@ export default function ContactPage() {
                     <div className="text-center">
                         <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
                         <p className="text-lg max-w-3xl mx-auto text-emerald-100">
-                            Get in touch with our team for inquiries, quotes, or information about our products.
-                            We're here to help you with all your agricultural needs.
+                            {`Get in touch with our team for inquiries, quotes, or information about our products.
+                            We're here to help you with all your agricultural needs.`}
                         </p>
                     </div>
                 </div>

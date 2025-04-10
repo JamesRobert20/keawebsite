@@ -126,8 +126,8 @@ export default function ProductsPage() {
                     <div className="mt-16 bg-emerald-50 rounded-lg p-8 shadow-sm">
                         <h2 className="text-2xl font-bold text-emerald-800 mb-4">Future Product Offerings</h2>
                         <p className="text-gray-700 mb-6">
-                            At Kea Company Ltd, we're constantly expanding our range of products to meet the needs of our customers
-                            and support more local farmers. In the coming months, we'll be adding:
+                            {`At Kea Company Ltd, we're constantly expanding our range of products to meet the needs of our customers
+                            and support more local farmers. In the coming months, we'll be adding:`}
                         </p>
 
                         <ul className="space-y-4">
@@ -137,7 +137,7 @@ export default function ProductsPage() {
                                 </svg>
                                 <div>
                                     <h3 className="font-bold text-emerald-700">Rice</h3>
-                                    <p className="text-gray-700">Sourced from Tanzania's most fertile rice-growing regions.</p>
+                                    <p className="text-gray-700">{`Sourced from Tanzania's most fertile rice-growing regions.`}</p>
                                 </div>
                             </li>
 

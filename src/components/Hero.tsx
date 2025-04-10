@@ -16,7 +16,7 @@ export default function Hero() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                            <span className="text-amber-300">Quality Maize</span> from Tanzania's Heartland
+                            <span className="text-amber-300">Quality Maize</span>{` from Tanzania's Heartland`}
                         </h1>
                         <p className="text-lg md:text-xl mb-8 text-gray-200">
                             Connecting local farmers with markets, delivering freshness from field to table, and supporting sustainable agriculture in Tanzania.

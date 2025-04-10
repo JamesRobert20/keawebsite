@@ -43,8 +43,8 @@ export default function TestimonialSection() {
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-emerald-800 mb-4">What Our Customers Say</h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        We take pride in our products and the relationships we build with our customers.
-                        Here's what they have to say about working with Kea Company Ltd.
+                        {`We take pride in our products and the relationships we build with our customers.
+                        Here's what they have to say about working with Kea Company Ltd.`}
                     </p>
                 </div>
 
@@ -71,7 +71,7 @@ export default function TestimonialSection() {
                             </svg>
 
                             <p className="text-gray-700 italic text-lg relative z-10 px-6">
-                                "{testimonials[activeTestimonial].text}"
+                                {`"${testimonials[activeTestimonial].text}"`}
                             </p>
                         </div>
                     </div>

@@ -40,7 +40,7 @@ export default function AboutPage() {
                                     We recognized the challenges faced by small-scale farmers in accessing fair markets and the growing demand for quality local produce in urban areas. By bridging this gap, we create value for both farmers and consumers.
                                 </p>
                                 <p>
-                                    Starting with maize, Tanzania's staple crop, we've built strong relationships with farming communities across the country's most fertile regions. Our commitment to quality, sustainability, and community development guides everything we do.
+                                    {`Starting with maize, Tanzania's staple crop, we've built strong relationships with farming communities across the country's most fertile regions. Our commitment to quality, sustainability, and community development guides everything we do.`}
                                 </p>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ export default function AboutPage() {
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-emerald-800 mb-4">Our Mission & Values</h2>
                         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                            We're committed to sustainable agriculture and supporting local communities.
+                            {`We're committed to sustainable agriculture and supporting local communities.`}
                         </p>
                     </div>
 

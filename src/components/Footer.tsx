@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-6 md:px-10">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div>
-                        <h3 className="text-xl font-bold text-amber-300 mb-4">Kea Crops</h3>
+                        <h3 className="text-xl font-bold text-amber-300 mb-4">Kea Company Ltd</h3>
                         <p className="mb-2">Quality agricultural products from Tanzania.</p>
                         <p className="mb-2">Connecting farmers to market, improving lives.</p>
                     </div>
@@ -41,7 +41,7 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold text-amber-300 mb-4">Contact Us</h3>
                         <p className="mb-2">123 Uhuru Street, Dar es Salaam, Tanzania</p>
                         <p className="mb-2">Phone: +255 123 456 789</p>
-                        <p className="mb-2">Email: info@keacrops.com</p>
+                        <p className="mb-2">Email: info@keacompanyltd.com</p>
 
                         <div className="flex space-x-4 mt-4">
                             <a href="#" className="hover:text-amber-300 transition duration-300" aria-label="Facebook">
@@ -65,7 +65,7 @@ export default function Footer() {
                 </div>
 
                 <div className="mt-10 pt-6 border-t border-emerald-700 text-center text-sm">
-                    <p>&copy; {new Date().getFullYear()} Kea Crops. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Kea Company Ltd. All rights reserved.</p>
                 </div>
             </div>
         </footer>

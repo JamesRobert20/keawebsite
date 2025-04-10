@@ -7,21 +7,21 @@ const testimonials = [
         id: 1,
         name: "Maria Kimaro",
         role: "Owner, Mama's Grocery Store",
-        text: "The quality of maize from Kea Crops is consistently excellent. My customers appreciate the fresh, premium products and keep coming back for more. Their reliable delivery has helped my business grow.",
+        text: "The quality of maize from Kea Company Ltd is consistently excellent. My customers appreciate the fresh, premium products and keep coming back for more. Their reliable delivery has helped my business grow.",
         image: "/testimonial-1.jpg" // Placeholder, we'll use an avatar icon
     },
     {
         id: 2,
         name: "John Mbwana",
         role: "Restaurant Manager, Dar Cuisine",
-        text: "We've been sourcing our maize from Kea Crops for over a year now. The quality and consistency helps us maintain the high standards our customers expect. Their customer service is also exceptional.",
+        text: "We've been sourcing our maize from Kea Company Ltd for over a year now. The quality and consistency helps us maintain the high standards our customers expect. Their customer service is also exceptional.",
         image: "/testimonial-2.jpg" // Placeholder, we'll use an avatar icon
     },
     {
         id: 3,
         name: "Grace Mutua",
         role: "Flour Mill Owner",
-        text: "As a flour miller, the quality of maize is critical to my business. Kea Crops delivers clean, well-sorted maize that produces excellent flour. Their fair pricing and reliable supply have made them our preferred supplier.",
+        text: "As a flour miller, the quality of maize is critical to my business. Kea Company Ltd delivers clean, well-sorted maize that produces excellent flour. Their fair pricing and reliable supply have made them our preferred supplier.",
         image: "/testimonial-3.jpg" // Placeholder, we'll use an avatar icon
     },
 ];
@@ -44,7 +44,7 @@ export default function TestimonialSection() {
                     <h2 className="text-3xl md:text-4xl font-bold text-emerald-800 mb-4">What Our Customers Say</h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                         We take pride in our products and the relationships we build with our customers.
-                        Here's what they have to say about working with Kea Crops.
+                        Here's what they have to say about working with Kea Company Ltd.
                     </p>
                 </div>
 

@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Kea Crops | Premium Tanzanian Maize Supplier",
-    description: "Kea Crops is a leading supplier of high-quality maize products from Tanzania. We connect local farmers with markets and deliver premium agricultural produce.",
+    title: "Kea Company Ltd | Premium Tanzanian Maize Supplier",
+    description: "Kea Company Ltd is a leading supplier of high-quality maize products from Tanzania. We connect local farmers with markets and deliver premium agricultural produce.",
 };
 
 export default function RootLayout({

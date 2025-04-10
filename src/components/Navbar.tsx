@@ -10,7 +10,7 @@ export default function Navbar() {
         <nav className="bg-emerald-800 text-white py-4 px-6 md:px-10 fixed w-full z-100">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <Link href="/" className="flex items-center space-x-2">
-                    <span className="text-xl font-bold text-amber-300">Kea Crops</span>
+                    <span className="text-xl font-bold text-amber-300">Kea Company Ltd</span>
                 </Link>
 
                 {/* Desktop menu */}

@@ -7,7 +7,7 @@ export default function AboutPage() {
             <section className="pt-24 pb-16 bg-emerald-800 text-white">
                 <div className="max-w-7xl mx-auto px-6 md:px-10">
                     <div className="text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">About Kea Crops</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6">About Kea Company Ltd</h1>
                         <p className="text-lg max-w-3xl mx-auto text-emerald-100">
                             Connecting Tanzanian farmers to markets, delivering premium
                             agricultural products, and promoting sustainable farming practices.
@@ -34,7 +34,7 @@ export default function AboutPage() {
                             <h2 className="text-3xl font-bold text-emerald-800 mb-6">Our Story</h2>
                             <div className="space-y-4 text-gray-700">
                                 <p>
-                                    Founded in 2020, Kea Crops started with a simple mission: to connect local Tanzanian farmers with urban markets and provide high-quality agricultural products to consumers.
+                                    Founded in 2020, Kea Company Ltd started with a simple mission: to connect local Tanzanian farmers with urban markets and provide high-quality agricultural products to consumers.
                                 </p>
                                 <p>
                                     We recognized the challenges faced by small-scale farmers in accessing fair markets and the growing demand for quality local produce in urban areas. By bridging this gap, we create value for both farmers and consumers.
@@ -111,7 +111,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Team member cards */}
                         {[
-                            { name: 'John Makame', role: 'Founder & CEO', bio: 'With over 10 years in agriculture and business development, John founded Kea Crops to support local farmers and promote sustainable agriculture in Tanzania.' },
+                            { name: 'John Makame', role: 'Founder & CEO', bio: 'With over 10 years in agriculture and business development, John founded Kea Company Ltd to support local farmers and promote sustainable agriculture in Tanzania.' },
                             { name: 'Sarah Mwangi', role: 'Operations Director', bio: 'Sarah oversees our supply chain and ensures quality control, bringing her expertise in logistics and agricultural operations to our team.' },
                             { name: 'Michael Olomi', role: 'Farmer Relations', bio: 'Michael works directly with our network of farmers, providing training, support, and ensuring fair and transparent business relationships.' },
                         ].map((member, index) => (
@@ -137,7 +137,7 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-6 md:px-10 text-center">
                     <h2 className="text-2xl md:text-3xl font-bold mb-6">Work with Us</h2>
                     <p className="text-lg mb-8 max-w-3xl mx-auto text-emerald-100">
-                        Interested in partnering with Kea Crops or learning more about our products and services?
+                        Interested in partnering with Kea Company Ltd or learning more about our products and services?
                     </p>
                     <Link
                         href="/contact"

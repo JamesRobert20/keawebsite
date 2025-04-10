@@ -66,8 +66,8 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="text-lg font-bold text-emerald-800 mb-1">Email</h3>
                                         <p className="text-gray-700">
-                                            info@keacrops.com<br />
-                                            sales@keacrops.com
+                                            info@keacompanyltd.com<br />
+                                            sales@keacompanyltd.com
                                         </p>
                                     </div>
                                 </div>

@@ -3,241 +3,363 @@ import Link from 'next/link';
 const products = [
     {
         id: 1,
-        name: "Premium Maize Grade A",
-        description: "High-quality maize grain, cleaned and sorted for optimal quality. Perfect for milling into flour or direct cooking.",
+        name: "Quality Maize Grade A",
+        emoji: "🌽",
+        description: "High-quality maize grain, meticulously cleaned and sorted. Perfect for milling into flour, making ugali, or direct cooking applications.",
         details: [
-            "Source: Selected farms across Tanzania's Southern Highlands",
-            "Quality: Premium grade, low moisture content",
-            "Packaging: Available in 10kg, 25kg, and 50kg bags",
-            "Best for: Milling, cooking, and commercial use"
+            "Source: Selected farms across Tanzania's Southern Highlands & Mbeya region",
+            "Quality: Grade A, moisture content below 13%",
+            "Packaging: Available in 10kg, 25kg, 50kg, and bulk quantities",
+            "Best for: Flour mills, food processors, restaurants, retailers"
         ],
-        price: "Contact for pricing",
-        image: "/maize-product-1.jpg", // Placeholder
+        color: "from-amber-400 to-yellow-500",
+        bgColor: "bg-gradient-to-br from-amber-50 to-yellow-50",
+        category: "grain",
     },
     {
         id: 2,
         name: "White Maize Wholesale",
-        description: "Bulk white maize for commercial purposes. Available in large quantities for restaurants, grocers, and mills.",
+        emoji: "🌾",
+        description: "Bulk white maize for commercial operations. Consistent quality, cleaned and ready for your processing needs.",
         details: [
-            "Source: Network of farms in Tanzania's key agricultural regions",
-            "Quality: Standard grade, sorted and cleaned",
+            "Source: Network of farms across Tanzania's key agricultural regions",
+            "Quality: Commercial grade, sorted and cleaned",
             "Packaging: Bulk quantities available (minimum 500kg)",
-            "Best for: Food processing, restaurants, and retail distribution"
+            "Best for: Large-scale food processing, industrial use"
         ],
-        price: "Contact for pricing",
-        image: "/maize-product-2.jpg", // Placeholder
+        color: "from-amber-300 to-amber-400",
+        bgColor: "bg-gradient-to-br from-amber-50 to-yellow-50",
+        category: "grain",
     },
     {
         id: 3,
-        name: "Maize Flour",
-        description: "Finely milled maize flour ideal for making ugali and other traditional Tanzanian dishes.",
+        name: "Red Kidney Beans",
+        emoji: "🫘",
+        description: "Protein-rich red kidney beans from Tanzania's highlands. Ideal for restaurants, grocery retailers, and food manufacturers.",
         details: [
-            "Source: Made from our premium grade maize",
-            "Quality: Fine texture, preservative-free",
-            "Packaging: Available in 2kg, 5kg and 10kg bags",
-            "Best for: Ugali, porridge, and baking"
+            "Source: Arusha and Kilimanjaro regions",
+            "Quality: Hand-sorted, uniform size, low moisture",
+            "Packaging: Available in 5kg, 10kg, 25kg, and bulk",
+            "Best for: Restaurants, supermarkets, food manufacturers"
         ],
-        price: "Contact for pricing",
-        image: "/maize-product-3.jpg", // Placeholder
+        color: "from-red-500 to-red-600",
+        bgColor: "bg-gradient-to-br from-red-50 to-amber-50",
+        category: "legume",
     },
     {
         id: 4,
+        name: "Mixed Beans Variety",
+        emoji: "🫛",
+        description: "A diverse selection of locally grown beans including black-eyed peas, butter beans, and more. Perfect for retailers.",
+        details: [
+            "Source: Various regions across Tanzania",
+            "Quality: Graded and sorted by type",
+            "Packaging: Mixed or single-variety bags available",
+            "Best for: Retailers, markets, food service"
+        ],
+        color: "from-amber-600 to-orange-500",
+        bgColor: "bg-gradient-to-br from-orange-50 to-amber-50",
+        category: "legume",
+    },
+    {
+        id: 5,
+        name: "Long Grain Rice",
+        emoji: "🍚",
+        description: "Aromatic long-grain rice from Tanzania's fertile paddy fields. Perfect for everyday meals and special occasions.",
+        details: [
+            "Source: Mbeya and Morogoro rice paddies",
+            "Quality: Aromatic, non-GMO, polished white rice",
+            "Packaging: Available in 2kg, 5kg, 10kg, 25kg bags",
+            "Best for: Households, restaurants, hospitality industry"
+        ],
+        color: "from-stone-200 to-stone-300",
+        bgColor: "bg-gradient-to-br from-stone-50 to-amber-50",
+        category: "grain",
+    },
+    {
+        id: 6,
+        name: "Fresh Cassava",
+        emoji: "🥔",
+        description: "Quality cassava roots from local farms. A versatile staple for various culinary applications, from chips to flour.",
+        details: [
+            "Source: Coastal and central Tanzania farms",
+            "Quality: Fresh harvest, cleaned and inspected",
+            "Packaging: Fresh roots or processed (flour, chips)",
+            "Best for: Food processors, markets, restaurants"
+        ],
+        color: "from-amber-200 to-orange-300",
+        bgColor: "bg-gradient-to-br from-orange-50 to-amber-50",
+        category: "root",
+    },
+    {
+        id: 7,
+        name: "Maize Flour (Sembe)",
+        emoji: "🥣",
+        description: "Finely milled maize flour for authentic ugali and traditional Tanzanian dishes. Made from quality Tanzanian maize.",
+        details: [
+            "Source: Made from quality Tanzanian maize",
+            "Quality: Fine texture, fresh, preservative-free",
+            "Packaging: Available in 2kg, 5kg, 10kg bags",
+            "Best for: Households, restaurants, caterers"
+        ],
+        color: "from-yellow-300 to-amber-400",
+        bgColor: "bg-gradient-to-br from-yellow-50 to-amber-50",
+        category: "processed",
+    },
+    {
+        id: 8,
         name: "Animal Feed Maize",
-        description: "Quality maize suitable for animal feed production, meeting nutritional requirements for livestock.",
+        emoji: "🐔",
+        description: "Quality maize for animal feed production. Consistent quality meeting nutritional requirements for poultry and livestock.",
         details: [
             "Source: Selected farms across Tanzania",
-            "Quality: Feed grade, consistent quality",
-            "Packaging: Available in bulk (minimum 250kg)",
-            "Best for: Poultry farms, dairy farms, and feed manufacturers"
+            "Quality: Feed grade, consistent nutritional profile",
+            "Packaging: Bulk quantities (minimum 250kg)",
+            "Best for: Poultry farms, dairy farms, feed manufacturers"
         ],
-        price: "Contact for pricing",
-        image: "/maize-product-4.jpg", // Placeholder
+        color: "from-amber-500 to-yellow-600",
+        bgColor: "bg-gradient-to-br from-amber-50 to-yellow-50",
+        category: "feed",
     }
+];
+
+const categories = [
+    { id: 'all', name: 'All Products', emoji: '🌾' },
+    { id: 'grain', name: 'Grains', emoji: '🌽' },
+    { id: 'legume', name: 'Legumes', emoji: '🫘' },
+    { id: 'root', name: 'Root Crops', emoji: '🥔' },
+    { id: 'processed', name: 'Processed', emoji: '🥣' },
+    { id: 'feed', name: 'Animal Feed', emoji: '🐔' },
 ];
 
 export default function ProductsPage() {
     return (
         <>
-            {/* Hero section */}
-            <section className="pt-24 pb-16 bg-emerald-800 text-white">
-                <div className="max-w-7xl mx-auto px-6 md:px-10">
-                    <div className="text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Products</h1>
-                        <p className="text-lg max-w-3xl mx-auto text-emerald-100">
-                            Quality maize products sourced directly from Tanzanian farmers.
-                            All our products meet stringent quality standards and are ethically sourced.
+            {/* Hero Section */}
+            <section className="pt-32 pb-20 bg-white relative overflow-hidden">
+                <div className="absolute inset-0 gradient-mesh"></div>
+                <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-10 right-10 w-48 h-48 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-2xl"></div>
+
+                <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+                    <div className="max-w-3xl">
+                        <span className="inline-block px-4 py-1.5 glass text-primary rounded-full text-sm font-medium mb-6">
+                            Our Products
+                        </span>
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-6" style={{ fontFamily: 'var(--font-display)' }}>
+                            Tanzanian Crops
+                            <span className="gradient-text block mt-2">For Your Business</span>
+                        </h1>
+                        <p className="text-xl text-stone leading-relaxed">
+                            Quality maize, beans, rice, cassava, and more — all sourced directly from
+                            Tanzanian farmers and delivered to your business.
                         </p>
+                    </div>
+
+                    {/* Quick Stats */}
+                    <div className="mt-12 flex flex-wrap gap-6">
+                        {[
+                            { value: '8+', label: 'Products' },
+                            { value: '4', label: 'Categories' },
+                            { value: '100%', label: 'Tanzanian' },
+                        ].map((stat) => (
+                            <div key={stat.label} className="card-glass rounded-xl px-6 py-4">
+                                <p className="text-2xl font-bold gradient-text">{stat.value}</p>
+                                <p className="text-sm text-stone">{stat.label}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Products grid */}
-            <section className="py-16 bg-gray-50">
+            {/* Categories */}
+            <section className="py-8 bg-white sticky top-16 z-40 border-b border-cream-dark">
+                <div className="max-w-7xl mx-auto px-6 md:px-10">
+                    <div className="flex flex-wrap gap-3 justify-center">
+                        {categories.map((category) => (
+                            <button
+                                key={category.id}
+                                className="px-5 py-2.5 rounded-xl glass hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white text-stone font-medium text-sm transition-all duration-300 flex items-center space-x-2"
+                            >
+                                <span>{category.emoji}</span>
+                                <span>{category.name}</span>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Products Grid */}
+            <section className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-6 md:px-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {products.map((product) => (
-                            <div key={product.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
-                                <div className="grid grid-cols-1 md:grid-cols-3">
-                                    {/* Product image (using a colored div with SVG pattern for now) */}
-                                    <div
-                                        className="h-full min-h-[200px] bg-amber-100 flex items-center justify-center"
-                                        style={{
-                                            backgroundImage: "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiBmaWxsPSJub25lIi8+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMS41IiBmaWxsPSJyZ2JhKDIyMCwxNjQsMCwwLjIpIi8+PGNpcmNsZSBjeD0iMTUiIGN5PSIxNSIgcj0iMS41IiBmaWxsPSJyZ2JhKDIyMCwxNjQsMCwwLjIpIi8+PGNpcmNsZSBjeD0iMTUiIGN5PSI0NSIgcj0iMS41IiBmaWxsPSJyZ2JhKDIyMCwxNjQsMCwwLjIpIi8+PGNpcmNsZSBjeD0iNDUiIGN5PSIxNSIgcj0iMS41IiBmaWxsPSJyZ2JhKDIyMCwxNjQsMCwwLjIpIi8+PGNpcmNsZSBjeD0iNDUiIGN5PSI0NSIgcj0iMS41IiBmaWxsPSJyZ2JhKDIyMCwxNjQsMCwwLjIpIi8+PC9zdmc+')",
-                                            backgroundSize: "60px 60px",
-                                        }}
-                                    >
-                                        <svg className="w-16 h-16 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clipRule="evenodd" />
-                                        </svg>
+                            <div
+                                key={product.id}
+                                className="group card rounded-2xl overflow-hidden hover:-translate-y-1 transition-all duration-500"
+                            >
+                                <div className="flex flex-col md:flex-row">
+                                    {/* Product Visual */}
+                                    <div className={`${product.bgColor} p-8 flex items-center justify-center md:w-2/5 relative overflow-hidden`}>
+                                        <div className={`w-32 h-32 rounded-3xl bg-gradient-to-br ${product.color} flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500`}>
+                                            <span className="text-6xl">{product.emoji}</span>
+                                        </div>
+                                        {/* Decorative */}
+                                        <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-white/50"></div>
+                                        <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-white/30"></div>
                                     </div>
 
-                                    {/* Product details */}
-                                    <div className="p-6 md:col-span-2">
-                                        <h3 className="text-xl font-bold text-emerald-800 mb-2">{product.name}</h3>
-                                        <p className="text-gray-600 mb-4">{product.description}</p>
+                                    {/* Product Details */}
+                                    <div className="p-6 md:w-3/5">
+                                        <div className="flex items-start justify-between mb-3">
+                                            <h3 className="text-xl font-semibold text-foreground" style={{ fontFamily: 'var(--font-display)' }}>
+                                                {product.name}
+                                            </h3>
+                                            <span className="px-2 py-1 glass text-primary text-xs font-medium rounded-lg capitalize">
+                                                {product.category}
+                                            </span>
+                                        </div>
+                                        <p className="text-stone text-sm mb-4 leading-relaxed">
+                                            {product.description}
+                                        </p>
 
-                                        <ul className="mb-6 space-y-2">
-                                            {product.details.map((detail, index) => (
-                                                <li key={index} className="flex items-start">
-                                                    <svg className="w-5 h-5 text-amber-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        {/* Details List */}
+                                        <ul className="space-y-2 mb-5">
+                                            {product.details.slice(0, 3).map((detail, idx) => (
+                                                <li key={idx} className="flex items-start text-sm">
+                                                    <svg className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                     </svg>
-                                                    <span className="text-gray-700">{detail}</span>
+                                                    <span className="text-stone">{detail}</span>
                                                 </li>
                                             ))}
                                         </ul>
 
-                                        <div className="flex flex-wrap justify-between items-center">
-                                            <span className="text-emerald-800 font-medium mb-4 md:mb-0">{product.price}</span>
-                                            <Link
-                                                href="/contact"
-                                                className="bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2 px-6 rounded transition duration-300"
-                                            >
-                                                Request Quote
-                                            </Link>
-                                        </div>
+                                        {/* CTA */}
+                                        <Link
+                                            href="/contact"
+                                            className="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-primary to-primary-dark text-white text-sm font-medium rounded-xl hover:shadow-lg transition-all duration-300 group/btn"
+                                        >
+                                            Request Quote
+                                            <svg className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
-
-                    {/* Future products note */}
-                    <div className="mt-16 bg-emerald-50 rounded-lg p-8 shadow-sm">
-                        <h2 className="text-2xl font-bold text-emerald-800 mb-4">Future Product Offerings</h2>
-                        <p className="text-gray-700 mb-6">
-                            {`At Kea Company Ltd, we're constantly expanding our range of products to meet the needs of our customers
-                            and support more local farmers. In the coming months, we'll be adding:`}
-                        </p>
-
-                        <ul className="space-y-4">
-                            <li className="flex items-start">
-                                <svg className="w-6 h-6 text-amber-500 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                </svg>
-                                <div>
-                                    <h3 className="font-bold text-emerald-700">Rice</h3>
-                                    <p className="text-gray-700">{`Sourced from Tanzania's most fertile rice-growing regions.`}</p>
-                                </div>
-                            </li>
-
-                            <li className="flex items-start">
-                                <svg className="w-6 h-6 text-amber-500 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                </svg>
-                                <div>
-                                    <h3 className="font-bold text-emerald-700">Beans</h3>
-                                    <p className="text-gray-700">Various types of locally grown beans, high in protein and nutrition.</p>
-                                </div>
-                            </li>
-
-                            <li className="flex items-start">
-                                <svg className="w-6 h-6 text-amber-500 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                </svg>
-                                <div>
-                                    <h3 className="font-bold text-emerald-700">Cassava</h3>
-                                    <p className="text-gray-700">Fresh cassava and processed cassava products from local farms.</p>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div className="mt-6">
-                            <p className="text-gray-700">
-                                Interested in being notified when we launch new products? Contact us to join our mailing list.
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </section>
 
-            {/* Quality assurance section */}
-            <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-6 md:px-10">
-                    <div className="text-center">
-                        <h2 className="text-3xl font-bold text-emerald-800 mb-4">Our Quality Assurance</h2>
-                        <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-                            Every product we offer undergoes strict quality control measures to ensure you receive only the best.
+            {/* Quality Assurance Section */}
+            <section className="py-20 bg-white relative overflow-hidden">
+                <div className="absolute inset-0 dot-pattern opacity-30"></div>
+                <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-1.5 glass text-primary rounded-full text-sm font-medium mb-4">
+                            Quality Promise
+                        </span>
+                        <h2 className="text-3xl md:text-4xl text-foreground mb-4" style={{ fontFamily: 'var(--font-display)' }}>
+                            Our Quality Standards
+                        </h2>
+                        <p className="text-lg text-stone max-w-2xl mx-auto">
+                            Every crop we deliver meets strict quality standards for your business.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-emerald-50 p-6 rounded-lg">
-                            <div className="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center text-white mb-4 mx-auto">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                </svg>
+                        {[
+                            {
+                                icon: '🔍',
+                                title: 'Rigorous Selection',
+                                description: 'Each batch is carefully selected from trusted farmers who meet our quality criteria.',
+                            },
+                            {
+                                icon: '📋',
+                                title: 'Testing & Grading',
+                                description: 'Products undergo testing for moisture, contaminants, and grading standards.',
+                            },
+                            {
+                                icon: '📦',
+                                title: 'Proper Packaging',
+                                description: 'Quality packaging that preserves freshness and protects products during transit.',
+                            },
+                        ].map((item) => (
+                            <div key={item.title} className="text-center p-8 card-glass rounded-2xl hover:-translate-y-1 transition-all duration-300">
+                                <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-6">
+                                    <span className="text-3xl">{item.icon}</span>
+                                </div>
+                                <h3 className="text-xl font-semibold text-foreground mb-3" style={{ fontFamily: 'var(--font-display)' }}>
+                                    {item.title}
+                                </h3>
+                                <p className="text-stone">{item.description}</p>
                             </div>
-                            <h3 className="text-lg font-bold text-emerald-800 mb-2 text-center">Rigorous Selection</h3>
-                            <p className="text-gray-700 text-center">
-                                Each batch of maize is carefully selected from trusted farmers who meet our strict quality standards.
-                            </p>
-                        </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
-                        <div className="bg-emerald-50 p-6 rounded-lg">
-                            <div className="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center text-white mb-4 mx-auto">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
-                                    <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
-                                </svg>
+            {/* Coming Soon Section */}
+            <section className="py-16 bg-white">
+                <div className="max-w-7xl mx-auto px-6 md:px-10">
+                    <div className="bg-gradient-to-r from-primary via-primary-light to-accent rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+                        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <span className="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-4">
+                                    Coming Soon
+                                </span>
+                                <h2 className="text-3xl md:text-4xl mb-4" style={{ fontFamily: 'var(--font-display)' }}>
+                                    Expanding Our Range
+                                </h2>
+                                <p className="text-white/80 mb-6">
+                                    We&apos;re constantly working to bring you more variety. New crops and products are being added.
+                                </p>
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center px-6 py-3 bg-white text-primary font-semibold rounded-xl transition-all duration-300 hover:-translate-y-1"
+                                >
+                                    Get Notified
+                                </Link>
                             </div>
-                            <h3 className="text-lg font-bold text-emerald-800 mb-2 text-center">Thorough Testing</h3>
-                            <p className="text-gray-700 text-center">
-                                Our products undergo testing for moisture content, contaminants, and quality to ensure they meet food safety standards.
-                            </p>
-                        </div>
-
-                        <div className="bg-emerald-50 p-6 rounded-lg">
-                            <div className="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center text-white mb-4 mx-auto">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
-                                </svg>
+                            <div className="flex justify-center space-x-4">
+                                {['🥜', '🌻', '☕'].map((emoji, index) => (
+                                    <div
+                                        key={index}
+                                        className="w-24 h-24 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center"
+                                    >
+                                        <span className="text-5xl">{emoji}</span>
+                                    </div>
+                                ))}
                             </div>
-                            <h3 className="text-lg font-bold text-emerald-800 mb-2 text-center">Fair Pricing</h3>
-                            <p className="text-gray-700 text-center">
-                                We offer competitive prices that are fair to both our farmers and customers, creating sustainable value for all.
-                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* CTA section */}
-            <section className="py-12 bg-emerald-800 text-white">
-                <div className="max-w-7xl mx-auto px-6 md:px-10 text-center">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6">Ready to Order?</h2>
-                    <p className="text-lg mb-8 max-w-3xl mx-auto text-emerald-100">
-                        Contact us today to discuss your requirements and get a custom quote.
+            {/* CTA Section */}
+            <section className="py-16 bg-gradient-to-r from-primary via-primary-light to-accent relative overflow-hidden">
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                <div className="relative max-w-4xl mx-auto px-6 md:px-10 text-center">
+                    <h2 className="text-3xl md:text-4xl text-white mb-6" style={{ fontFamily: 'var(--font-display)' }}>
+                        Ready to Order?
+                    </h2>
+                    <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+                        Contact us for custom quotes, bulk pricing, and delivery options tailored to your needs.
                     </p>
                     <Link
                         href="/contact"
-                        className="inline-block bg-amber-400 hover:bg-amber-500 text-emerald-900 font-semibold py-3 px-8 rounded-lg transition duration-300"
+                        className="inline-flex items-center px-8 py-4 bg-white text-primary font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                     >
                         Request a Quote
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
                     </Link>
                 </div>
             </section>
         </>
     );
-} 
+}

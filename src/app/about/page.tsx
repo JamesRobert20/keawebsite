@@ -1,46 +1,102 @@
 import Link from 'next/link';
 
+const milestones = [
+    { year: '2020', event: 'Company founded in Dar es Salaam', icon: '🏢' },
+    { year: '2021', event: 'Reached 100 partner farmers', icon: '🤝' },
+    { year: '2022', event: 'Expanded to beans and rice products', icon: '🌱' },
+    { year: '2023', event: '500+ farmers in our network', icon: '👨‍🌾' },
+    { year: '2024', event: 'Added cassava and expanded regionally', icon: '🚀' },
+];
+
 export default function AboutPage() {
     return (
         <>
-            {/* Hero section */}
-            <section className="pt-24 pb-16 bg-emerald-800 text-white">
-                <div className="max-w-7xl mx-auto px-6 md:px-10">
-                    <div className="text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">About Kea Company Ltd</h1>
-                        <p className="text-lg max-w-3xl mx-auto text-emerald-100">
-                            Connecting Tanzanian farmers to markets, delivering premium
-                            agricultural products, and promoting sustainable farming practices.
+            {/* Hero Section */}
+            <section className="pt-32 pb-20 bg-white relative overflow-hidden">
+                {/* Background */}
+                <div className="absolute inset-0 gradient-mesh"></div>
+                <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-2xl"></div>
+
+                <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+                    <div className="max-w-3xl">
+                        <span className="inline-block px-4 py-1.5 glass text-primary rounded-full text-sm font-medium mb-6">
+                            Our Story
+                        </span>
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-6" style={{ fontFamily: 'var(--font-display)' }}>
+                            Connecting Farmers
+                            <span className="gradient-text block mt-2">to Markets</span>
+                        </h1>
+                        <p className="text-xl text-stone leading-relaxed">
+                            We partner with Tanzanian farmers to supply quality crops directly to grocery chains, 
+                            restaurants, and businesses — creating value for everyone in the supply chain.
                         </p>
                     </div>
                 </div>
             </section>
 
-            {/* Our story section */}
-            <section className="py-16 bg-white">
+            {/* Our Story Section */}
+            <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-6 md:px-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        {/* Image placeholder */}
-                        <div className="bg-emerald-100 rounded-lg p-8 aspect-square flex items-center justify-center">
-                            <div className="text-center">
-                                <svg className="w-24 h-24 mx-auto text-emerald-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                                </svg>
-                                <p className="mt-4 text-emerald-800 font-semibold">Dar es Salaam, Tanzania</p>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        {/* Image Side */}
+                        <div className="relative">
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="space-y-4">
+                                    <div className="h-40 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center card-glass">
+                                        <span className="text-6xl">🌾</span>
+                                    </div>
+                                    <div className="h-56 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center">
+                                        <span className="text-7xl">🌽</span>
+                                    </div>
+                                </div>
+                                <div className="space-y-4 pt-8">
+                                    <div className="h-56 bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center">
+                                        <span className="text-7xl">🫘</span>
+                                    </div>
+                                    <div className="h-40 bg-gradient-to-br from-stone-100 to-stone-200 rounded-2xl flex items-center justify-center">
+                                        <span className="text-6xl">🍚</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Floating Badge */}
+                            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 card-glass rounded-xl p-4">
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                                        <span className="text-2xl">📍</span>
+                                    </div>
+                                    <div>
+                                        <p className="font-bold text-foreground">Dar es Salaam</p>
+                                        <p className="text-xs text-stone">Tanzania, East Africa</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
+                        {/* Content Side */}
                         <div>
-                            <h2 className="text-3xl font-bold text-emerald-800 mb-6">Our Story</h2>
-                            <div className="space-y-4 text-gray-700">
+                            <span className="inline-block px-4 py-1.5 glass text-primary rounded-full text-sm font-medium mb-4">
+                                Since 2020
+                            </span>
+                            <h2 className="text-3xl md:text-4xl text-foreground mb-6" style={{ fontFamily: 'var(--font-display)' }}>
+                                Our Journey
+                            </h2>
+                            <div className="space-y-4 text-stone leading-relaxed">
                                 <p>
-                                    Founded in 2020, Kea Company Ltd started with a simple mission: to connect local Tanzanian farmers with urban markets and provide high-quality agricultural products to consumers.
+                                    Kea Company Ltd was founded to solve a real problem: Tanzanian farmers produce 
+                                    excellent crops but often lack access to fair markets. Meanwhile, businesses need 
+                                    reliable suppliers they can trust.
                                 </p>
                                 <p>
-                                    We recognized the challenges faced by small-scale farmers in accessing fair markets and the growing demand for quality local produce in urban areas. By bridging this gap, we create value for both farmers and consumers.
+                                    Starting with maize — Tanzania&apos;s staple crop — we built relationships with farming
+                                    communities across the country&apos;s most fertile regions. Fair pricing and quality 
+                                    standards quickly earned us trust on both sides.
                                 </p>
                                 <p>
-                                    {`Starting with maize, Tanzania's staple crop, we've built strong relationships with farming communities across the country's most fertile regions. Our commitment to quality, sustainability, and community development guides everything we do.`}
+                                    Today, we supply beans, rice, cassava, and other essential crops, working with 
+                                    over 500 farmers and serving businesses throughout East Africa. Our growth 
+                                    reflects the success of our farmer partners.
                                 </p>
                             </div>
                         </div>
@@ -48,105 +104,173 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Mission and values */}
-            <section className="py-16 bg-emerald-50">
-                <div className="max-w-7xl mx-auto px-6 md:px-10">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-emerald-800 mb-4">Our Mission & Values</h2>
-                        <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                            {`We're committed to sustainable agriculture and supporting local communities.`}
+            {/* Timeline Section */}
+            <section className="py-20 bg-white relative overflow-hidden">
+                <div className="absolute inset-0 dot-pattern opacity-30"></div>
+                <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-1.5 glass text-primary rounded-full text-sm font-medium mb-4">
+                            Milestones
+                        </span>
+                        <h2 className="text-3xl md:text-4xl text-foreground" style={{ fontFamily: 'var(--font-display)' }}>
+                            Our Growth Story
+                        </h2>
+                    </div>
+
+                    <div className="relative">
+                        {/* Timeline Line */}
+                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary-light hidden md:block"></div>
+
+                        <div className="space-y-8 md:space-y-0">
+                            {milestones.map((milestone, index) => (
+                                <div
+                                    key={milestone.year}
+                                    className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                                        }`}
+                                >
+                                    {/* Content */}
+                                    <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
+                                        <div className="card-glass rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300">
+                                            <span className="text-4xl mb-3 block">{milestone.icon}</span>
+                                            <p className="text-2xl font-bold gradient-text mb-2" style={{ fontFamily: 'var(--font-display)' }}>
+                                                {milestone.year}
+                                            </p>
+                                            <p className="text-stone">{milestone.event}</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Center Dot */}
+                                    <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-accent border-4 border-white shadow-md hidden md:block"></div>
+
+                                    {/* Empty space for alternating layout */}
+                                    <div className="hidden md:block w-5/12"></div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mission & Values Section */}
+            <section className="py-20 bg-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-accent/5 to-primary/5 rounded-full blur-3xl"></div>
+
+                <div className="relative max-w-7xl mx-auto px-6 md:px-10">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-1.5 glass text-primary rounded-full text-sm font-medium mb-4">
+                            What We Stand For
+                        </span>
+                        <h2 className="text-3xl md:text-4xl text-foreground mb-4" style={{ fontFamily: 'var(--font-display)' }}>
+                            Our Mission & Values
+                        </h2>
+                        <p className="text-lg text-stone max-w-2xl mx-auto">
+                            Every decision we make is guided by these core principles.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-white p-8 rounded-lg shadow-md">
-                            <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold text-emerald-800 mb-3 text-center">Quality</h3>
-                            <p className="text-gray-700 text-center">
-                                We uphold the highest standards in all our products, ensuring they meet local and international quality benchmarks.
-                            </p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-lg shadow-md">
-                            <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clipRule="evenodd" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold text-emerald-800 mb-3 text-center">Sustainability</h3>
-                            <p className="text-gray-700 text-center">
-                                We promote environmentally friendly farming practices and help farmers implement sustainable methods.
-                            </p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-lg shadow-md">
-                            <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold text-emerald-800 mb-3 text-center">Community</h3>
-                            <p className="text-gray-700 text-center">
-                                We invest in farmer training, fair compensation, and community development projects in the regions where we operate.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Team section */}
-            <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-6 md:px-10">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-emerald-800 mb-4">Our Team</h2>
-                        <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                            Meet the dedicated professionals working to connect Tanzanian farmers with markets.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* Team member cards */}
                         {[
-                            { name: 'John Makame', role: 'Founder & CEO', bio: 'With over 10 years in agriculture and business development, John founded Kea Company Ltd to support local farmers and promote sustainable agriculture in Tanzania.' },
-                            { name: 'Sarah Mwangi', role: 'Operations Director', bio: 'Sarah oversees our supply chain and ensures quality control, bringing her expertise in logistics and agricultural operations to our team.' },
-                            { name: 'Michael Olomi', role: 'Farmer Relations', bio: 'Michael works directly with our network of farmers, providing training, support, and ensuring fair and transparent business relationships.' },
-                        ].map((member, index) => (
-                            <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                                <div className="h-48 bg-emerald-200 flex items-center justify-center">
-                                    <div className="w-24 h-24 rounded-full bg-emerald-700 flex items-center justify-center text-white text-3xl font-bold">
-                                        {member.name.charAt(0)}
-                                    </div>
+                            {
+                                icon: '🎯',
+                                title: 'Quality Assurance',
+                                description: 'Every crop is tested, sorted, and verified to meet business standards before reaching our customers.',
+                                color: 'from-amber-400 to-amber-500',
+                            },
+                            {
+                                icon: '🌍',
+                                title: 'Sustainability',
+                                description: 'We promote eco-friendly farming practices, helping farmers protect their land for future generations.',
+                                color: 'from-green-400 to-green-500',
+                            },
+                            {
+                                icon: '🤝',
+                                title: 'Fair Partnership',
+                                description: 'Fair prices for farmers mean better livelihoods, which translates to better products for everyone.',
+                                color: 'from-primary to-accent',
+                            },
+                        ].map((value) => (
+                            <div key={value.title} className="card rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
+                                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${value.color} flex items-center justify-center mb-6`}>
+                                    <span className="text-3xl">{value.icon}</span>
                                 </div>
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-emerald-800">{member.name}</h3>
-                                    <p className="text-amber-600 font-medium mb-4">{member.role}</p>
-                                    <p className="text-gray-700">{member.bio}</p>
-                                </div>
+                                <h3 className="text-xl font-semibold text-foreground mb-3" style={{ fontFamily: 'var(--font-display)' }}>
+                                    {value.title}
+                                </h3>
+                                <p className="text-stone leading-relaxed">
+                                    {value.description}
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* CTA section */}
-            <section className="py-12 bg-emerald-800 text-white">
-                <div className="max-w-7xl mx-auto px-6 md:px-10 text-center">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6">Work with Us</h2>
-                    <p className="text-lg mb-8 max-w-3xl mx-auto text-emerald-100">
-                        Interested in partnering with Kea Company Ltd or learning more about our products and services?
+            {/* How We Work Section */}
+            <section className="py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-6 md:px-10">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-1.5 glass text-primary rounded-full text-sm font-medium mb-4">
+                            Our Process
+                        </span>
+                        <h2 className="text-3xl md:text-4xl text-foreground mb-4" style={{ fontFamily: 'var(--font-display)' }}>
+                            How We Work
+                        </h2>
+                        <p className="text-lg text-stone max-w-2xl mx-auto">
+                            From farm to your business — a simple, transparent process.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        {[
+                            { step: '01', title: 'Farm Sourcing', description: 'We source crops directly from our network of 500+ Tanzanian farmers.', icon: '🌾' },
+                            { step: '02', title: 'Quality Check', description: 'Every batch is tested for quality, moisture, and grading standards.', icon: '✅' },
+                            { step: '03', title: 'Processing', description: 'Crops are cleaned, sorted, and packaged to meet your specifications.', icon: '📦' },
+                            { step: '04', title: 'Delivery', description: 'Reliable delivery to grocery chains, restaurants, and businesses.', icon: '🚚' },
+                        ].map((item, index) => (
+                            <div key={item.step} className="text-center relative">
+                                {/* Connector line */}
+                                {index < 3 && (
+                                    <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary/20 to-accent/20"></div>
+                                )}
+                                <div className="relative z-10 w-20 h-20 mx-auto rounded-2xl card-glass flex items-center justify-center mb-4">
+                                    <span className="text-4xl">{item.icon}</span>
+                                </div>
+                                <span className="text-sm font-bold gradient-text">{item.step}</span>
+                                <h3 className="text-lg font-semibold text-foreground mt-2 mb-2">{item.title}</h3>
+                                <p className="text-stone text-sm">{item.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-16 bg-gradient-to-r from-primary via-primary-light to-accent relative overflow-hidden">
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                <div className="relative max-w-4xl mx-auto px-6 md:px-10 text-center">
+                    <h2 className="text-3xl md:text-4xl text-white mb-6" style={{ fontFamily: 'var(--font-display)' }}>
+                        Ready to Partner with Us?
+                    </h2>
+                    <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+                        Join businesses across Tanzania who trust Kea Company for their crop supply needs.
                     </p>
-                    <Link
-                        href="/contact"
-                        className="inline-block bg-amber-400 hover:bg-amber-500 text-emerald-900 font-semibold py-3 px-8 rounded-lg transition duration-300"
-                    >
-                        Get in Touch
-                    </Link>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Link
+                            href="/contact"
+                            className="px-8 py-4 bg-white text-primary font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                        >
+                            Get in Touch
+                        </Link>
+                        <Link
+                            href="/products"
+                            className="px-8 py-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 transition-all duration-300 hover:-translate-y-1"
+                        >
+                            View Our Crops
+                        </Link>
+                    </div>
                 </div>
             </section>
         </>
     );
-} 
+}

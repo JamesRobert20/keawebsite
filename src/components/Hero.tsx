@@ -1,97 +1,186 @@
+'use client'
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
+const crops = [
+    { name: 'Maize', emoji: '🌽', color: 'from-amber-400 to-yellow-500' },
+    { name: 'Beans', emoji: '🫘', color: 'from-red-400 to-amber-600' },
+    { name: 'Rice', emoji: '🍚', color: 'from-stone-200 to-amber-100' },
+    { name: 'Cassava', emoji: '🥔', color: 'from-amber-200 to-orange-300' },
+];
 
 export default function Hero() {
-    return (
-        <div className="relative bg-emerald-900 text-white">
-            {/* Background layer with maize field pattern */}
-            <div
-                className="absolute inset-0 bg-opacity-30 overflow-hidden"
-                style={{
-                    backgroundImage: "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0ibm9uZSIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjxjaXJjbGUgY3g9IjI1IiBjeT0iMjUiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjxjaXJjbGUgY3g9IjI1IiBjeT0iNzUiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iMjUiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNzUiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==')",
-                    backgroundSize: "100px 100px",
-                }}
-            ></div>
+    const [activeCrop, setActiveCrop] = useState(0);
 
-            <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 px-6 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveCrop((prev) => (prev + 1) % crops.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <div className="relative min-h-screen overflow-hidden bg-white">
+            {/* Gradient Mesh Background */}
+            <div className="absolute inset-0 gradient-mesh"></div>
+            
+            {/* Floating Gradient Orbs */}
+            <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-accent/20 to-primary/10 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute bottom-40 right-20 w-96 h-96 bg-gradient-to-br from-primary/10 to-accent/20 rounded-full blur-3xl animate-float delay-300"></div>
+            <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float delay-500"></div>
+
+            {/* Dot Pattern */}
+            <div className="absolute inset-0 dot-pattern opacity-50"></div>
+
+            {/* Content */}
+            <div className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    {/* Left Content */}
                     <div>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                            <span className="text-amber-300">Quality Maize</span>{` from Tanzania's Heartland`}
+                        {/* Badge */}
+                        <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in-up">
+                            <span className="w-2 h-2 bg-primary rounded-full animate-gentle-pulse"></span>
+                            <span className="text-sm font-medium text-primary">Connecting Farmers to Markets</span>
+                        </div>
+
+                        {/* Main Heading */}
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-6 animate-fade-in-up delay-100" style={{ fontFamily: 'var(--font-display)' }}>
+                            <span className="text-foreground">Tanzanian Crops,</span>
+                            <span className="block mt-2 gradient-text">Delivered Direct</span>
                         </h1>
-                        <p className="text-lg md:text-xl mb-8 text-gray-200">
-                            Connecting local farmers with markets, delivering freshness from field to table, and supporting sustainable agriculture in Tanzania.
+
+                        {/* Description */}
+                        <p className="text-lg md:text-xl text-stone mb-10 max-w-xl leading-relaxed animate-fade-in-up delay-200">
+                            We partner with local farmers to supply quality maize, beans, rice, and cassava 
+                            directly to grocery chains, restaurants, and businesses across East Africa.
                         </p>
-                        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+
+                        {/* CTA Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
                             <Link
                                 href="/products"
-                                className="bg-amber-400 hover:bg-amber-500 text-emerald-900 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center"
+                                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-1"
                             >
-                                Our Products
+                                View Our Crops
+                                <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
                             </Link>
                             <Link
                                 href="/contact"
-                                className="bg-transparent hover:bg-emerald-700 border-2 border-amber-400 text-amber-400 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center"
+                                className="group inline-flex items-center justify-center px-8 py-4 glass text-foreground font-semibold rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                             >
-                                Contact Us
+                                Request Quote
+                                <svg className="w-5 h-5 ml-2 opacity-60 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
                             </Link>
                         </div>
                     </div>
 
-                    <div className="hidden md:block">
-                        <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
-                            <div
-                                className="absolute inset-0 bg-amber-500 bg-opacity-20 flex items-center justify-center"
-                                style={{
-                                    backgroundImage: "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0ibm9uZSIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDIyMCw2MCwwLjQpIi8+PGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMiIgZmlsbD0icmdiYSgyNTUsMjIwLDYwLDAuNCkiLz48Y2lyY2xlIGN4PSIyNSIgY3k9Ijc1IiByPSIyIiBmaWxsPSJyZ2JhKDI1NSwyMjAsNjAsMC40KSIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iMjUiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDIyMCw2MCwwLjQpIi8+PGNpcmNsZSBjeD0iNzUiIGN5PSI3NSIgcj0iMiIgZmlsbD0icmdiYSgyNTUsMjIwLDYwLDAuNCkiLz48L3N2Zz4=')",
-                                    backgroundSize: "50px 50px",
-                                }}
-                            >
-                                {/* Replacement for an actual image */}
-                                <div className="text-center p-4">
-                                    <svg className="w-32 h-32 mx-auto text-amber-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
-                                    </svg>
-                                    <h3 className="mt-4 text-xl font-bold text-white">Maize from Tanzania</h3>
-                                    <p className="mt-2 text-white text-opacity-80">Premium grade, sustainably farmed</p>
+                    {/* Right Content - Crop Showcase */}
+                    <div className="hidden lg:block animate-fade-in-up delay-400">
+                        <div className="relative">
+                            {/* Main Showcase Card */}
+                            <div className="relative card-glass rounded-3xl p-8">
+                                {/* Crop Display */}
+                                <div className="text-center">
+                                    <div className={`w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-br ${crops[activeCrop].color} flex items-center justify-center transition-all duration-500 shadow-2xl`}>
+                                        <span className="text-7xl">{crops[activeCrop].emoji}</span>
+                                    </div>
+                                    <h3 className="text-2xl font-semibold text-foreground mb-2" style={{ fontFamily: 'var(--font-display)' }}>
+                                        {crops[activeCrop].name}
+                                    </h3>
+                                    <p className="text-stone">Direct from Tanzanian farms</p>
+                                </div>
+
+                                {/* Crop Selector */}
+                                <div className="flex justify-center space-x-3 mt-8">
+                                    {crops.map((crop, index) => (
+                                        <button
+                                            key={crop.name}
+                                            onClick={() => setActiveCrop(index)}
+                                            className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${index === activeCrop
+                                                ? 'bg-primary/10 scale-110 shadow-lg ring-2 ring-primary/20'
+                                                : 'bg-cream hover:bg-cream-dark'
+                                                }`}
+                                        >
+                                            <span className="text-2xl">{crop.emoji}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Floating Stats Cards */}
+                            <div className="absolute -bottom-6 -left-6 card-glass rounded-2xl p-4 animate-float">
+                                <div className="flex items-center space-x-3">
+                                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                                        <span className="text-xl">🌾</span>
+                                    </div>
+                                    <div>
+                                        <p className="text-2xl font-bold text-primary" style={{ fontFamily: 'var(--font-display)' }}>500+</p>
+                                        <p className="text-xs text-stone">Partner Farmers</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="absolute -top-4 -right-4 card-glass rounded-2xl p-4 animate-float delay-200">
+                                <div className="flex items-center space-x-3">
+                                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center">
+                                        <span className="text-xl">📦</span>
+                                    </div>
+                                    <div>
+                                        <p className="text-2xl font-bold text-primary" style={{ fontFamily: 'var(--font-display)' }}>10K+</p>
+                                        <p className="text-xs text-stone">Tons Delivered</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-                    <div className="p-6 rounded-lg bg-emerald-800 bg-opacity-50">
-                        <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-amber-400 text-emerald-900">
-                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                            </svg>
+                {/* Feature Cards */}
+                <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {[
+                        {
+                            icon: '🌱',
+                            title: 'Multi-Crop Supply',
+                            description: 'Maize, beans, rice, cassava and more — all from one trusted supplier.'
+                        },
+                        {
+                            icon: '🤝',
+                            title: 'Farm Partnerships',
+                            description: 'Direct relationships with 500+ Tanzanian farmers for reliable supply.'
+                        },
+                        {
+                            icon: '✅',
+                            title: 'Quality Assured',
+                            description: 'Rigorous quality control ensures only the best reaches your business.'
+                        },
+                        {
+                            icon: '🚚',
+                            title: 'B2B Delivery',
+                            description: 'Reliable supply to grocery chains, restaurants, and businesses.'
+                        },
+                    ].map((feature, index) => (
+                        <div
+                            key={feature.title}
+                            className={`group card-glass rounded-2xl p-6 hover:-translate-y-1 transition-all duration-300 animate-fade-in-up`}
+                            style={{ animationDelay: `${400 + index * 100}ms` }}
+                        >
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <span className="text-3xl">{feature.icon}</span>
+                            </div>
+                            <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
+                            <p className="text-stone text-sm leading-relaxed">{feature.description}</p>
                         </div>
-                        <h3 className="text-xl font-bold mb-2">Quality Products</h3>
-                        <p className="text-gray-300">Premium grade maize sourced directly from Tanzanian farmers.</p>
-                    </div>
-
-                    <div className="p-6 rounded-lg bg-emerald-800 bg-opacity-50">
-                        <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-amber-400 text-emerald-900">
-                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clipRule="evenodd" />
-                            </svg>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2">Support Local Farmers</h3>
-                        <p className="text-gray-300">We work directly with farmers to ensure fair prices and sustainable practices.</p>
-                    </div>
-
-                    <div className="p-6 rounded-lg bg-emerald-800 bg-opacity-50">
-                        <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-amber-400 text-emerald-900">
-                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
-                            </svg>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2">Fair Pricing</h3>
-                        <p className="text-gray-300">Competitive prices for both farmers and consumers in our supply chain.</p>
-                    </div>
+                    ))}
                 </div>
             </div>
+
+            {/* Bottom Gradient Fade */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
         </div>
     );
-} 
+}

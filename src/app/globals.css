@@ -1,30 +1,30 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
     /* Clean White-Based Color Palette */
-    --background: #FFFFFF;
-    --foreground: #1C1917;
+    --background: #ffffff;
+    --foreground: #1c1917;
 
     /* Primary: Warm Terracotta/Earth */
-    --primary: #B45309;
-    --primary-light: #D97706;
-    --primary-dark: #92400E;
+    --primary: #b45309;
+    --primary-light: #d97706;
+    --primary-dark: #92400e;
 
     /* Secondary: Soft Sage (muted, not vibrant green) */
-    --secondary: #6B7280;
-    --secondary-light: #9CA3AF;
-    --secondary-dark: #4B5563;
+    --secondary: #6b7280;
+    --secondary-light: #9ca3af;
+    --secondary-dark: #4b5563;
 
     /* Accent: Golden Amber */
-    --accent: #F59E0B;
-    --accent-light: #FBBF24;
-    --accent-dark: #D97706;
+    --accent: #f59e0b;
+    --accent-light: #fbbf24;
+    --accent-dark: #d97706;
 
     /* Neutral Tones */
-    --cream: #FAFAF9;
-    --cream-dark: #F5F5F4;
-    --stone: #78716C;
-    --stone-light: #A8A29E;
+    --cream: #fafaf9;
+    --cream-dark: #f5f5f4;
+    --stone: #78716c;
+    --stone-light: #a8a29e;
 
     /* Glass Effect Colors */
     --glass-white: rgba(255, 255, 255, 0.8);
@@ -53,21 +53,21 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0F0F0F;
-        --foreground: #FAFAF9;
-        --primary: #F59E0B;
-        --primary-light: #FBBF24;
-        --primary-dark: #D97706;
-        --secondary: #9CA3AF;
-        --secondary-light: #D1D5DB;
-        --secondary-dark: #6B7280;
-        --accent: #FBBF24;
-        --accent-light: #FCD34D;
-        --accent-dark: #F59E0B;
-        --cream: #1C1917;
-        --cream-dark: #0F0F0F;
-        --stone: #A8A29E;
-        --stone-light: #D6D3D1;
+        --background: #0f0f0f;
+        --foreground: #fafaf9;
+        --primary: #f59e0b;
+        --primary-light: #fbbf24;
+        --primary-dark: #d97706;
+        --secondary: #9ca3af;
+        --secondary-light: #d1d5db;
+        --secondary-dark: #6b7280;
+        --accent: #fbbf24;
+        --accent-light: #fcd34d;
+        --accent-dark: #f59e0b;
+        --cream: #1c1917;
+        --cream-dark: #0f0f0f;
+        --stone: #a8a29e;
+        --stone-light: #d6d3d1;
         --glass-white: rgba(28, 25, 23, 0.8);
         --glass-border: rgba(255, 255, 255, 0.1);
     }
@@ -81,7 +81,15 @@ html {
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family:
+        var(--font-sans),
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        sans-serif;
     line-height: 1.7;
 }
 
@@ -120,30 +128,39 @@ h6 {
 
 /* Gradient Backgrounds */
 .gradient-warm {
-    background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
 }
 
 .gradient-subtle {
-    background: linear-gradient(180deg, #FFFFFF 0%, #FAFAF9 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #fafaf9 100%);
 }
 
 .gradient-hero {
-    background: linear-gradient(135deg, #B45309 0%, #D97706 30%, #F59E0B 60%, #FBBF24 100%);
+    background: linear-gradient(
+        135deg,
+        #b45309 0%,
+        #d97706 30%,
+        #f59e0b 60%,
+        #fbbf24 100%
+    );
 }
 
 .gradient-mesh {
-    background: 
+    background:
         radial-gradient(at 40% 20%, rgba(245, 158, 11, 0.15) 0px, transparent 50%),
         radial-gradient(at 80% 0%, rgba(217, 119, 6, 0.1) 0px, transparent 50%),
         radial-gradient(at 0% 50%, rgba(251, 191, 36, 0.1) 0px, transparent 50%),
         radial-gradient(at 80% 50%, rgba(180, 83, 9, 0.08) 0px, transparent 50%),
-        radial-gradient(at 0% 100%, rgba(245, 158, 11, 0.1) 0px, transparent 50%),
-        #FFFFFF;
+        radial-gradient(at 0% 100%, rgba(245, 158, 11, 0.1) 0px, transparent 50%), #ffffff;
 }
 
 /* Subtle Pattern */
 .dot-pattern {
-    background-image: radial-gradient(circle, rgba(180, 83, 9, 0.08) 1px, transparent 1px);
+    background-image: radial-gradient(
+        circle,
+        rgba(180, 83, 9, 0.08) 1px,
+        transparent 1px
+    );
     background-size: 24px 24px;
 }
 
@@ -265,7 +282,12 @@ h6 {
 }
 
 .animate-shimmer {
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
     background-size: 200% 100%;
     animation: shimmer 2s infinite;
 }
@@ -419,11 +441,13 @@ img[loading] {
 /* Section Divider */
 .section-divider {
     height: 2px;
-    background: linear-gradient(90deg,
-            transparent,
-            var(--accent-light) 20%,
-            var(--accent) 50%,
-            var(--accent-light) 80%,
-            transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--accent-light) 20%,
+        var(--accent) 50%,
+        var(--accent-light) 80%,
+        transparent
+    );
     border-radius: 1px;
 }

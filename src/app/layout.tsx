@@ -19,13 +19,13 @@ const jakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-    title: 'Kea Company Ltd | Tanzanian Crop Supplier - Farm to Market',
+    title: 'KEA Associates Limited | Tanzanian Crop Supplier - Farm to Market',
     description:
-        'Kea Company Ltd connects Tanzanian farmers directly to grocery chains, restaurants, and businesses. We supply quality maize, beans, rice, and cassava with reliable delivery across East Africa.',
+        'KEA Associates Limited connects Tanzanian farmers directly to grocery chains, restaurants, and businesses. We supply quality maize, beans, rice, and cassava with reliable delivery across East Africa.',
     keywords:
         'Tanzania crops supplier, maize wholesale Tanzania, beans supplier, rice supplier, cassava, agricultural products Tanzania, Dar es Salaam, East Africa, farm to market, B2B crops',
     openGraph: {
-        title: 'Kea Company Ltd | Farm to Market Crop Supply',
+        title: 'KEA Associates Limited | Farm to Market Crop Supply',
         description:
             'Connecting Tanzanian farmers to businesses. Quality maize, beans, rice & cassava supplied directly to grocery chains and restaurants.',
         type: 'website',

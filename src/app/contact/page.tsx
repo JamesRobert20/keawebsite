@@ -121,9 +121,7 @@ export default function ContactPage() {
                                             Email
                                         </h3>
                                         <p className="text-stone text-sm">
-                                            info@keacompany.co.tz
-                                            <br />
-                                            sales@keacompany.co.tz
+                                            info@kea.co.tz
                                         </p>
                                     </div>
                                 </div>
@@ -231,7 +229,7 @@ export default function ContactPage() {
                                         className="flex items-center text-stone hover:text-primary transition-colors group"
                                     >
                                         <span className="mr-3">📖</span>
-                                        <span>About Kea Company</span>
+                                        <span>About KEA Associates</span>
                                         <svg
                                             className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
                                             fill="none"
@@ -291,7 +289,7 @@ export default function ContactPage() {
                                     className="text-2xl font-semibold text-foreground mb-2"
                                     style={{ fontFamily: 'var(--font-display)' }}
                                 >
-                                    Kea Company Ltd
+                                    KEA Associates Limited
                                 </h3>
                                 <p className="text-stone mb-4">
                                     123 Uhuru Street, Dar es Salaam, Tanzania

@@ -95,10 +95,10 @@ export default function AboutPage() {
                             </h2>
                             <div className="space-y-4 text-stone leading-relaxed">
                                 <p>
-                                    Kea Company Ltd was founded to solve a real problem:
-                                    Tanzanian farmers produce excellent crops but often
-                                    lack access to fair markets. Meanwhile, businesses
-                                    need reliable suppliers they can trust.
+                                    KEA Associates Limited was founded to solve a real
+                                    problem: Tanzanian farmers produce excellent crops but
+                                    often lack access to fair markets. Meanwhile,
+                                    businesses need reliable suppliers they can trust.
                                 </p>
                                 <p>
                                     Starting with maize — Tanzania&apos;s staple crop — we
@@ -333,7 +333,7 @@ export default function AboutPage() {
                         Ready to Partner with Us?
                     </h2>
                     <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-                        Join businesses across Tanzania who trust Kea Company for their
+                        Join businesses across Tanzania who trust KEA Associates for their
                         crop supply needs.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -44,7 +44,7 @@ export default function Navbar() {
                             className="text-xl font-semibold tracking-tight text-foreground"
                             style={{ fontFamily: 'var(--font-display)' }}
                         >
-                            Kea Company
+                            KEA Associates
                         </span>
                         <span className="text-[10px] uppercase tracking-widest text-primary">
                             Farm to Market

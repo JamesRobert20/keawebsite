@@ -33,7 +33,7 @@ export default function Footer() {
                                     className="text-2xl font-semibold text-foreground"
                                     style={{ fontFamily: 'var(--font-display)' }}
                                 >
-                                    Kea Company
+                                    KEA Associates
                                 </span>
                                 <span className="block text-[10px] uppercase tracking-widest text-primary">
                                     Farm to Market
@@ -180,9 +180,7 @@ export default function Footer() {
                                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                     </svg>
                                 </div>
-                                <span className="text-stone text-sm">
-                                    info@keacompany.co.tz
-                                </span>
+                                <span className="text-stone text-sm">info@kea.co.tz</span>
                             </li>
                         </ul>
 
@@ -231,8 +229,8 @@ export default function Footer() {
                 {/* Bottom Section */}
                 <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     <p className="text-stone text-sm">
-                        &copy; {new Date().getFullYear()} Kea Company Ltd. All rights
-                        reserved.
+                        &copy; {new Date().getFullYear()} KEA Associates Limited. All
+                        rights reserved.
                     </p>
                     <div className="flex items-center space-x-6 text-sm text-stone">
                         <Link

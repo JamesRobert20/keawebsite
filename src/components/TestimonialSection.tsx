@@ -8,7 +8,7 @@ const testimonials = [
         name: 'Maria Kimaro',
         role: 'Procurement Manager, FreshMart Supermarkets',
         location: 'Dar es Salaam',
-        text: 'Kea Company has been our go-to supplier for maize and beans. Their diverse crop selection means we source everything from one trusted partner. Delivery is always on time.',
+        text: 'KEA Associates has been our go-to supplier for maize and beans. Their diverse crop selection means we source everything from one trusted partner. Delivery is always on time.',
         rating: 5,
         crop: '🌽'
     },
@@ -17,7 +17,7 @@ const testimonials = [
         name: 'John Mbwana',
         role: 'Executive Chef, Serengeti Restaurant',
         location: 'Arusha',
-        text: 'As a restaurant, we need consistent quality and variety. Kea delivers both — from rice for our pilau to beans for traditional dishes. Everything arrives fresh.',
+        text: 'As a restaurant, we need consistent quality and variety. KEA delivers both — from rice for our pilau to beans for traditional dishes. Everything arrives fresh.',
         rating: 5,
         crop: '🍚'
     },
@@ -26,7 +26,7 @@ const testimonials = [
         name: 'Grace Mutua',
         role: 'Operations Director, Mutua Flour Mill',
         location: 'Mbeya',
-        text: 'The maize quality from Kea is consistently good — low moisture, clean grain, properly sorted. Their farmer network means reliable supply even during peak seasons.',
+        text: 'The maize quality from KEA is consistently good — low moisture, clean grain, properly sorted. Their farmer network means reliable supply even during peak seasons.',
         rating: 5,
         crop: '🌾'
     },
@@ -35,7 +35,7 @@ const testimonials = [
         name: 'Hassan Omari',
         role: 'Buyer, Coastal Food Distributors',
         location: 'Zanzibar',
-        text: 'Working with Kea simplified our supply chain. One company for maize, beans, rice, cassava. Their commitment to farmer partnerships means sustainable sourcing.',
+        text: 'Working with KEA simplified our supply chain. One company for maize, beans, rice, cassava. Their commitment to farmer partnerships means sustainable sourcing.',
         rating: 5,
         crop: '🫘'
     }
@@ -84,7 +84,7 @@ export default function TestimonialSection() {
                         <span className="gradient-text block mt-2">Across Tanzania</span>
                     </h2>
                     <p className="text-lg text-stone max-w-2xl mx-auto">
-                        See what our partners say about working with Kea Company
+                        See what our partners say about working with KEA Associates
                     </p>
                 </div>
 
